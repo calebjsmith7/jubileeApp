@@ -9,9 +9,10 @@ export default function Events(){
     const navigation = useNavigation();
     Linking.openURL(URL);
     
+    
     navigation.reset({
       index: 0,
-      routes: [{name: 'Latest'}],
+      routes: [{name: 'MyTabs'}],
     });
 
     return null;

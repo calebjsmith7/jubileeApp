@@ -1,7 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { data } from './eventData';
 
@@ -9,17 +8,14 @@ import { data } from './eventData';
 
 
 
-  export default function Media(){
+  export default function EventMap(){
     const navigation = useNavigation();
    
 
     return(
-        <ScrollView>
-       { data.map((item) => {
- 
-        if(item.type == 'Media'){
+       data.map((item) => {
            return( 
-    
+           
         <View style={styles.event}>
             <TouchableOpacity onPress={()=> navigation.reset({routes: [{name: item.slug}]})}>
                 <Image source={item.photo} style={styles.eventImage}/>
@@ -32,14 +28,9 @@ import { data } from './eventData';
                 <Text><Icon name="share" color={ '#565656'} size={18} style={{}}/> Share</Text>
            </View>
         </View>
-        
 
            );
-        }
        })
-    }
-    </ScrollView>
-        
     );
 }
 

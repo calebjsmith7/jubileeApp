@@ -5,7 +5,7 @@
  * @format
  * @flow strict-local
  */
-
+import 'react-native-gesture-handler';
 import React, { useEffect } from 'react';
 import {
   SafeAreaView,
@@ -31,11 +31,22 @@ import Engage from './components/engage';
 import Media from './components/media';
 import Give from './components/give';
 import Events from './components/events';
+import Alive from './events/alive';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Motorcycle from './events/motorcycle';
+import FallWomensBibleStudies from './events/fallwomensbiblestudies';
+import AnnualGolfTournament from './events/annualgolftournament';
+import KOMHJJ from './media/KOMHJJ';
+import Phil3 from './media/Phil3';
 
 
 
 const Tab = createBottomTabNavigator();
-const URL = 'https://pushpay.com/g/jfclonetree';
+const Stack = createNativeStackNavigator();
+
+
+
 
 function MyTabs() {
   return (
@@ -72,9 +83,12 @@ function MyTabs() {
             <Ikon name="time-outline" color="#FAF9F6" size={30} />
           ),
         }}/>
+
     </Tab.Navigator>
   );
 }
+
+
 
 function App(){
   
@@ -88,7 +102,18 @@ function App(){
       </View>
     </SafeAreaView>
     
-    <MyTabs/>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="MyTabs" component={MyTabs}/>
+        <Stack.Screen name="Alive" component={Alive}/>
+        <Stack.Screen name="Motorcycle" component={Motorcycle}/>
+        <Stack.Screen name="FallWomensBibleStudies" component={FallWomensBibleStudies}/>
+        <Stack.Screen name="AnnualGolfTournament" component={AnnualGolfTournament}/>
+        <Stack.Screen name="Komhjj" component={KOMHJJ}/>
+        <Stack.Screen name="Phil3" component={Phil3}/>
+        
+      </Stack.Navigator>
+  
+  
     </NavigationContainer>
   );
 };
