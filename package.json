@@ -17,17 +17,24 @@
     "@react-navigation/native": "^6.0.2",
     "@react-navigation/native-stack": "^6.1.0",
     "@react-navigation/stack": "^6.0.7",
+    "axios": "^0.21.4",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "googleapis": "^87.0.0",
     "react": "17.0.2",
     "react-native": "0.65.1",
     "react-native-elements": "^3.4.2",
     "react-native-gesture-handler": "^1.10.3",
+    "react-native-google-sheet": "^0.0.5",
     "react-native-safe-area-context": "^3.3.0",
     "react-native-screens": "^3.5.0",
     "react-native-svg": "^12.1.1",
     "react-native-vector-icons": "^8.1.0",
     "react-native-webview": "^11.13.0",
+    "react-native-youtube-iframe": "^2.1.2",
     "react-navigation-stack": "^2.10.4",
-    "react-router-native": "^5.2.0"
+    "react-router-native": "^5.2.0",
+    "tabletop": "^1.6.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -37,6 +44,7 @@
     "eslint": "7.14.0",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.66.0",
+    "nodemon": "^2.0.12",
     "react-native-codegen": "^0.0.7",
     "react-test-renderer": "17.0.2"
   },

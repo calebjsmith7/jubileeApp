@@ -1,17 +1,17 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { Button } from 'react-native';
+import { TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 
 
 export default function BackButton(){
     const Navigation = useNavigation();
      return(
-
-        <Button title="Back" onPress={() => Navigation.navigate({
+        <TouchableOpacity style={{backgroundColor: 'black', width: 400, paddingRight: 300, paddingLeft: 8, paddingBottom: 5}} onPress={() => Navigation.navigate({
             name: 'MyTabs'})}>
-                Back
-        </Button>
+            <Icon name="arrow-back-outline" color={'white'} size={30} />
+        </TouchableOpacity>
 
      );
 }

@@ -20,9 +20,9 @@ import { data } from './eventData';
         if(item.type == 'Media'){
            return( 
     
-        <View style={styles.event}>
+        <View style={styles.event} key={data.indexOf(item)}>
             <TouchableOpacity onPress={()=> navigation.reset({routes: [{name: item.slug}]})}>
-                <Image source={item.photo} style={styles.eventImage}/>
+                <Image source={{ uri: item.photo}} style={styles.eventImage}/>
                 <Text style={{fontSize: 25, margin: 5, marginLeft: 15}}>{item.title}</Text>
                 <Text style={{fontSize: 14, marginLeft: 15, color: '#565656'}}>{item.date}</Text>
                 <Text style={{fontSize: 15, margin: 27, marginLeft: 15, marginTop: 10}}>{item.summary}</Text>

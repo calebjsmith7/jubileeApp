@@ -20,7 +20,7 @@ import { data } from './eventData';
         if(item.type == 'Engage'){
            return( 
     
-        <View style={styles.event}>
+        <View style={styles.event} key={data.indexOf(item)}>
             <TouchableOpacity onPress={()=> navigation.reset({routes: [{name: item.slug}]})}>
                 <Image source={item.photo} style={styles.eventImage}/>
                 <Text style={{fontSize: 25, margin: 5, marginLeft: 15}}>{item.title}</Text>

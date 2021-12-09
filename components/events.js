@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { Text, Linking, View, Button } from 'react-native';
+import { Linking } from 'react-native';
 
 const URL = 'https://jfc.org/events';
 

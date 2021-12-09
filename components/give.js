@@ -1,8 +1,7 @@
 
 
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
-import React, {useEffect, useState } from 'react';
-import { Text, Linking, View, Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { Linking } from 'react-native';
 
 const URL = 'https://pushpay.com/g/jfclonetree';
 

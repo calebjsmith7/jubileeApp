@@ -1,5 +1,9 @@
 #import "AppDelegate.h"
-
+//ADD THIS
+#if RCT_DEV
+#import <React/RCTDevLoadingView.h>
+#endif
+// TILL HERE
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
@@ -36,6 +40,14 @@ static void InitializeFlipper(UIApplication *application) {
                                                    moduleName:@"JubileeApp2"
                                             initialProperties:nil];
 
+//added below
+#if RCT_DEV
+  [bridge moduleForClass:[RCTDevLoadingView class]];
+#endif
+  RCTRootView *rootview = [[RCTRootView alloc] initWithBridge:bridge
+                                                   moduleName:@"JubileeApp2"
+                                            initialProperties:nil];
+//added above
   if (@available(iOS 13.0, *)) {
       rootView.backgroundColor = [UIColor systemBackgroundColor];
   } else {

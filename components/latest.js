@@ -2,10 +2,7 @@ import React from 'react';
 import { ScrollView, Text, View, ImageBackground, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 import bg from '../images/bg.jpg';
-import jsmretreat from '../images/jsmretreat.jpg';
-import motorcycle from '../images/motorcycle.jpg';
-import womensbible from '../images/womensbible.jpg';
-import golf from '../images/golf.jpeg';
+
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 import EventMap from './EventMap';
